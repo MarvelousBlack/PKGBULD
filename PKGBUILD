@@ -4,10 +4,11 @@ buildarch=28
 
 pkgname=firmware-phicomm-n1
 pkgver=6
-pkgrel=5
+pkgrel=6
 pkgdesc="Additional firmware for Phicomm N1"
 arch=('any')
 conflicts=('firmware-raspberrypi')
+depends=('wireless-regdb' 'uboot-tools')
 url="https://github.com/RPi-Distro"
 license=('custom')
 _commitid_wl=130cb86fa30cafbd575d38865fa546350d4c5f9c
