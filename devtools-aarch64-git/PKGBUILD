@@ -1,0 +1,34 @@
+pkgname=devtools-aarch64-git
+pkgver=1.47c46e5
+pkgrel=1
+pkgdesc='Tools for Arch Linux Chinese Community arm package maintainers'
+arch=('any')
+url='https://github.com/MarvelousBlack/devtools-aarch64'
+license=('GPL')
+depends=('devtools')
+makedepends=('cmake' 'git')
+provides=('devtools-aarch64')
+conflicts=('devtools-aarch64')
+source=('git://github.com/MarvelousBlack/devtools-aarch64.git')
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/devtools-aarch64"
+
+  echo "$(git rev-list --count master).$(git rev-parse --short master)"
+}
+
+build() {
+  cd devtools-aarch64
+  mkdir -p build
+  cd build
+
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+  make
+}
+
+package() {
+  cd devtools-aarch64/build
+
+  make DESTDIR="${pkgdir}" install
+}
