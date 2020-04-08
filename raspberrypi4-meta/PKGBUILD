@@ -1,0 +1,14 @@
+# Maintainer: Megumifox <i@megumifox.com>
+pkgname=raspberrypi4-meta
+pkgver=20.4.8
+pkgrel=1
+arch=('any')
+url='https://github.com/MarvelousBlack/PKGBULD'
+license=(GPL)
+pkgdesc='Meta package for raspberrypi4 aarch64'
+depends=(openssh
+         linux-raspberrypi4
+         raspberrypi-userland-aarch64-git
+         python-raspberry-gpio
+         rpi-eeprom
+         pi4-bluetooth)
