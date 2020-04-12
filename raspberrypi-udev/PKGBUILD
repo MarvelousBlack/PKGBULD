@@ -1,14 +1,14 @@
 # Maintainer: Megumifox <i@megumifox.com>
 pkgname=raspberrypi-udev
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Udev rules for Raspberry Pi non-root gpio"
 arch=('any')
 url=""
 license=('unknown')
 source=("raspberrypi.rules")
-md5sums=('6c854ff7f49023ffcbc059acdc93dd44')
+md5sums=('dba95c2755cd5dcabddeffe8fa48bdf0')
 
 package() {
 	mkdir -p $pkgdir/usr/lib/udev/rules.d/
